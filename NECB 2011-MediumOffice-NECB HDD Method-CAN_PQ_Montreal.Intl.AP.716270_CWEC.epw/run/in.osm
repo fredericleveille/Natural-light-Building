@@ -16413,3 +16413,38 @@ OS:WeatherFile,
   file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.Dx7872/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
   3C3F39E2;                               !- Checksum
 
+OS:Output:Variable,
+  {00faf427-c19e-406a-983a-2011dec76b2e}, !- Handle
+  Output Variable 1,                      !- Name
+  *,                                      !- Key Value
+  Zone Air System Sensible Heating Energy, !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {f5b36424-2f8c-4fdd-97c4-4623f57badda}, !- Handle
+  Output Variable 2,                      !- Name
+  *,                                      !- Key Value
+  Zone Air System Sensible Cooling Energy, !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {edc2a326-bb2f-40e5-bbf0-148b13eb4e2d}, !- Handle
+  Output Variable 3,                      !- Name
+  *,                                      !- Key Value
+  Facility Total Purchased Electric Energy, !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {a34838cf-5b05-4606-bf47-23f533298472}, !- Handle
+  Output Variable 4,                      !- Name
+  *,                                      !- Key Value
+  Heating Coil Electric Energy,           !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {f9106a97-8cdb-46cd-8209-47c0c00e621f}, !- Handle
+  Output Variable 5,                      !- Name
+  *,                                      !- Key Value
+  Cooling Coil Total Cooling Energy,      !- Variable Name
+  runperiod;                              !- Reporting Frequency
+

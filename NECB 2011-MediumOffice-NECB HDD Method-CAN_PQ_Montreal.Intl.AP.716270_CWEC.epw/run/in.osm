@@ -7204,7 +7204,7 @@ OS:Pump:ConstantSpeed,
 OS:Chiller:Electric:EIR,
   {74ce1f69-2bcb-4ce4-94b0-2dbf91a66b5f}, !- Handle
   Primary Chiller WaterCooled Scroll 82tons 0.8kW/ton, !- Name
-  288107.785520808,                       !- Reference Capacity {W}
+  Autosize,                               !- Reference Capacity {W}
   4.54392764857881,                       !- Reference COP {W/W}
   ,                                       !- Reference Leaving Chilled Water Temperature {C}
   ,                                       !- Reference Entering Condenser Fluid Temperature {C}
@@ -8373,7 +8373,7 @@ OS:CoolingTower:SingleSpeed,
   {66c4eee6-3246-452a-a918-8a45ff7b650e}, !- Water Outlet Node Name
   autosize,                               !- Design Water Flow Rate {m3/s}
   autosize,                               !- Design Air Flow Rate {m3/s}
-  5272.69195764766,                       !- Fan Power at Design Air Flow Rate {W}
+  Autosize,                               !- Fan Power at Design Air Flow Rate {W}
   autosize,                               !- U-Factor Times Area Value at Design Air Flow Rate {W/K}
   autosize,                               !- Air Flow Rate in Free Convection Regime {m3/s}
   autosize,                               !- U-Factor Times Area Value at Free Convection Air Flow Rate {W/K}
@@ -16327,7 +16327,7 @@ OS:WeatherFile,
   -73.75,                                 !- Longitude {deg}
   -5,                                     !- Time Zone {hr}
   36,                                     !- Elevation {m}
-  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.y12268/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
+  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.Dx9164/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
   3C3F39E2;                               !- Checksum
 
 OS:SizingPeriod:DesignDay,
@@ -16569,42 +16569,42 @@ OS:SubSurface,
   9.74894266256348, 25.5754489858155, 10.668; !- X,Y,Z Vertex 4 {m}
 
 OS:Output:Variable,
-  {6704de96-8dca-4c07-bf3f-9831fb76b01b}, !- Handle
+  {7109624d-7bda-4d5c-b5ab-c0244e75be08}, !- Handle
   Output Variable 1,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Heating Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {34133b25-cffe-49ec-83b3-e7b76a52f14f}, !- Handle
+  {04b55334-1a31-42c5-a71f-7800aa683bb3}, !- Handle
   Output Variable 2,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Cooling Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {58af0492-be1a-4f43-9082-f23b71f4cf8c}, !- Handle
+  {9b48ca85-331a-4c40-ad44-790762a89bec}, !- Handle
   Output Variable 3,                      !- Name
   *,                                      !- Key Value
   Facility Total Purchased Electric Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {e9b330f7-2fed-4849-908e-bc665e6fa15a}, !- Handle
+  {7ea4b37d-3dca-4ccc-9c82-367ecf1497a2}, !- Handle
   Output Variable 4,                      !- Name
   *,                                      !- Key Value
   Heating Coil Electric Energy,           !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {53f9cdce-e77c-4838-a3c8-bbd4fe4837fc}, !- Handle
+  {879fa0d8-9895-4b20-a658-86c16e08bdd9}, !- Handle
   Output Variable 5,                      !- Name
   *,                                      !- Key Value
   Cooling Coil Total Cooling Energy,      !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {2f22f418-902a-466f-b54a-403187fd1df0}, !- Handle
+  {50d6e5c0-1224-4b6e-b82a-c155af491853}, !- Handle
   Output Variable 6,                      !- Name
   *,                                      !- Key Value
   Surface Inside Face Absorbed Shortwave Radiation Rate, !- Variable Name

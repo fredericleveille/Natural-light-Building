@@ -16413,3 +16413,99 @@ OS:WeatherFile,
   file:CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
   3C3F39E2;                               !- Checksum
 
+OS:SizingPeriod:DesignDay,
+  {0b9d2bbb-0e33-4e93-93f6-6000584febd6}, !- Handle
+  Montreal Int'l Ann Hum_n 99.6% Condns DP=>MCDB, !- Name
+  -23,                                    !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  -30.5,                                  !- Humidity Indicating Conditions at Maximum Dry-Bulb
+  100893,                                 !- Barometric Pressure {Pa}
+  3.9,                                    !- Wind Speed {m/s}
+  260,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  0,                                      !- Rain Indicator
+  0,                                      !- Snow Indicator
+  21,                                     !- Day of Month
+  1,                                      !- Month
+  WinterDesignDay,                        !- Day Type
+  0,                                      !- Daylight Saving Time Indicator
+  Dewpoint,                               !- Humidity Indicating Type
+  ,                                       !- Humidity Indicating Day Schedule Name
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Schedule Name
+  ASHRAEClearSky;                         !- Solar Model Indicator
+
+OS:SizingPeriod:DesignDay,
+  {bdefbb6f-eeb8-42e7-8273-45646f42126f}, !- Handle
+  Montreal Int'l Ann Htg Wind 99.6% Condns WS=>MCDB, !- Name
+  -5.3,                                   !- Maximum Dry-Bulb Temperature {C}
+  0,                                      !- Daily Dry-Bulb Temperature Range {deltaC}
+  -5.3,                                   !- Humidity Indicating Conditions at Maximum Dry-Bulb
+  100893,                                 !- Barometric Pressure {Pa}
+  12.9,                                   !- Wind Speed {m/s}
+  260,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  0,                                      !- Rain Indicator
+  0,                                      !- Snow Indicator
+  21,                                     !- Day of Month
+  1,                                      !- Month
+  WinterDesignDay,                        !- Day Type
+  0,                                      !- Daylight Saving Time Indicator
+  Wetbulb,                                !- Humidity Indicating Type
+  ,                                       !- Humidity Indicating Day Schedule Name
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Schedule Name
+  ASHRAEClearSky;                         !- Solar Model Indicator
+
+OS:SizingPeriod:DesignDay,
+  {cb62b9d3-5da3-4459-af19-bea2f20e4b5e}, !- Handle
+  Montreal Int'l Ann Clg .4% Condns DP=>MDB, !- Name
+  26,                                     !- Maximum Dry-Bulb Temperature {C}
+  9.3,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  21.6,                                   !- Humidity Indicating Conditions at Maximum Dry-Bulb
+  100893,                                 !- Barometric Pressure {Pa}
+  4.9,                                    !- Wind Speed {m/s}
+  220,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  0,                                      !- Rain Indicator
+  0,                                      !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  0,                                      !- Daylight Saving Time Indicator
+  Dewpoint,                               !- Humidity Indicating Type
+  ,                                       !- Humidity Indicating Day Schedule Name
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.465,                                  !- ASHRAE Taub {dimensionless}
+  1.966;                                  !- ASHRAE Taud {dimensionless}
+
+OS:SizingPeriod:DesignDay,
+  {1a9b13dc-2694-43fd-b5a3-6f4a05239cfd}, !- Handle
+  Montreal Int'l Ann Clg .4% Condns Enth=>MDB, !- Name
+  28.1,                                   !- Maximum Dry-Bulb Temperature {C}
+  9.3,                                    !- Daily Dry-Bulb Temperature Range {deltaC}
+  69300,                                  !- Humidity Indicating Conditions at Maximum Dry-Bulb
+  100893,                                 !- Barometric Pressure {Pa}
+  4.9,                                    !- Wind Speed {m/s}
+  220,                                    !- Wind Direction {deg}
+  0,                                      !- Sky Clearness
+  0,                                      !- Rain Indicator
+  0,                                      !- Snow Indicator
+  21,                                     !- Day of Month
+  7,                                      !- Month
+  SummerDesignDay,                        !- Day Type
+  0,                                      !- Daylight Saving Time Indicator
+  Enthalpy,                               !- Humidity Indicating Type
+  ,                                       !- Humidity Indicating Day Schedule Name
+  DefaultMultipliers,                     !- Dry-Bulb Temperature Range Modifier Type
+  ,                                       !- Dry-Bulb Temperature Range Modifier Schedule Name
+  ASHRAETau,                              !- Solar Model Indicator
+  ,                                       !- Beam Solar Day Schedule Name
+  ,                                       !- Diffuse Solar Day Schedule Name
+  0.465,                                  !- ASHRAE Taub {dimensionless}
+  1.966;                                  !- ASHRAE Taud {dimensionless}
+

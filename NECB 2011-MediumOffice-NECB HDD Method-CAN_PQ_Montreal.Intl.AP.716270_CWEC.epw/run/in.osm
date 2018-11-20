@@ -17313,44 +17313,51 @@ OS:Connection,
   3;                                      !- Inlet Port
 
 OS:Output:Variable,
-  {f75d18ba-35b7-4bf4-9c79-ef4e0093f7cb}, !- Handle
+  {3ca5aebc-73d2-48f1-a6dd-91f31015884c}, !- Handle
   Output Variable 1,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Heating Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {7c4d3107-2ea2-4051-b83d-56f88bd8b40d}, !- Handle
+  {3501fbf8-ffca-41e5-8649-c5c29e473dac}, !- Handle
   Output Variable 2,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Cooling Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {00ee3a90-a43d-4804-88c2-4c6284f2f2ad}, !- Handle
+  {f5fa8802-18d6-485c-8d11-3785aac9d078}, !- Handle
   Output Variable 3,                      !- Name
   *,                                      !- Key Value
   Facility Total Purchased Electric Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {31a27963-a366-4cff-82d7-01cb938d9572}, !- Handle
+  {af1a8adb-4a8e-42a6-ae85-6e9afd96e041}, !- Handle
   Output Variable 4,                      !- Name
   *,                                      !- Key Value
   Heating Coil Electric Energy,           !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {406e59f5-0157-4f14-9e69-5e202129579a}, !- Handle
+  {84659893-5fa2-492b-ab0e-813aea90ab81}, !- Handle
   Output Variable 5,                      !- Name
   *,                                      !- Key Value
   Cooling Coil Total Cooling Energy,      !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {b26671b8-0b80-4e3b-8294-87140e2d0c50}, !- Handle
+  {a5b920ee-c6f3-4a87-a080-3e4122c0229d}, !- Handle
   Output Variable 6,                      !- Name
   *,                                      !- Key Value
   Surface Inside Face Absorbed Shortwave Radiation Rate, !- Variable Name
   hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {e842a951-1c10-47e8-9729-9645e9d3c08a}, !- Handle
+  Output Variable 7,                      !- Name
+  *,                                      !- Key Value
+  Zone Ventilation Fan Electric Energy,   !- Variable Name
+  runperiod;                              !- Reporting Frequency
 

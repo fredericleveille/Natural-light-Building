@@ -1,11 +1,11 @@
 
 OS:Version,
-  {67e04f82-691a-411d-8f4b-0a347377fb07}, !- Handle
-  2.1.0;                                  !- Version Identifier
+  {c927e3a4-530f-4117-ae57-555943972eb9}, !- Handle
+  2.5.0;                                  !- Version Identifier
 
 OS:Site,
   {4401af15-c546-44f8-96c5-410b73437a27}, !- Handle
-  Montreal Int'l_PQ_CAN,                  !- Name
+  Montreal Int'l,                         !- Name
   45.47,                                  !- Latitude {deg}
   -73.75,                                 !- Longitude {deg}
   -5,                                     !- Time Zone {hr}
@@ -2967,20 +2967,6 @@ OS:Rendering:Color,
   240,                                    !- Rendering Red Value
   248,                                    !- Rendering Green Value
   255;                                    !- Rendering Blue Value
-
-OS:WeatherFile,
-  {0b669b27-28a1-4315-8966-085e0cf2375d}, !- Handle
-  Montreal Int'l,                         !- City
-  PQ,                                     !- State Province Region
-  CAN,                                    !- Country
-  WYEC2-B-94792,                          !- Data Source
-  716270,                                 !- WMO Number
-  45.47,                                  !- Latitude {deg}
-  -73.75,                                 !- Longitude {deg}
-  -5,                                     !- Time Zone {hr}
-  36,                                     !- Elevation {m}
-  file:///root/projects/necb_archtypes_generator/openstudio-standards/openstudio-standards/data/weather/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
-  3C3F39E2;                               !- Checksum
 
 OS:Site:GroundTemperature:BuildingSurface,
   {cc7ed848-2bda-460a-b174-a0c6d7036a51}, !- Handle
@@ -7024,6 +7010,7 @@ OS:PlantLoop,
   {2868472d-0145-4140-ad83-611c2dfdef90}, !- Handle
   Chilled Water Loop,                     !- Name
   ,                                       !- Fluid Type
+  0,                                      !- Glycol Concentration
   ,                                       !- User Defined Fluid Type
   ,                                       !- Plant Equipment Operation Heating Load
   ,                                       !- Plant Equipment Operation Cooling Load
@@ -7042,10 +7029,23 @@ OS:PlantLoop,
   ,                                       !- Demand Side Branch List Name
   ,                                       !- Demand Side Connector List Name
   Optimal,                                !- Load Distribution Scheme
-  ,                                       !- Availability Manager List Name
+  {2ce5635c-7581-4412-88ee-0ab46fd8cb61}, !- Availability Manager List Name
   ,                                       !- Plant Loop Demand Calculation Scheme
   ,                                       !- Common Pipe Simulation
-  ;                                       !- Pressure Simulation Type
+  ,                                       !- Pressure Simulation Type
+  ,                                       !- Plant Equipment Operation Heating Load Schedule
+  ,                                       !- Plant Equipment Operation Cooling Load Schedule
+  ,                                       !- Primary Plant Equipment Operation Scheme Schedule
+  ,                                       !- Component Setpoint Operation Scheme Schedule
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter Name
+  ,                                       !- Supply Mixer Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {2ce5635c-7581-4412-88ee-0ab46fd8cb61}, !- Handle
+  Chilled Water Loop AvailabilityManagerAssignmentList, !- Name
+  ;                                       !- Availability Manager Name 1
 
 OS:Sizing:Plant,
   {ab824d4c-5572-4043-a07f-c403b574a2b4}, !- Handle
@@ -7205,7 +7205,10 @@ OS:Pump:ConstantSpeed,
   ,                                       !- Impeller Diameter {m}
   ,                                       !- Rotational Speed {rev/min}
   ,                                       !- Zone
-  ;                                       !- Skin Loss Radiative Fraction
+  ,                                       !- Skin Loss Radiative Fraction
+  PowerPerFlowPerPressure,                !- Design Power Sizing Method
+  348701.1,                               !- Design Electric Power per Unit Flow Rate {W/(m3/s)}
+  1.282051282;                            !- Design Shaft Power per Unit Flow Rate per Unit Head {W-s/m3-Pa}
 
 OS:Chiller:Electric:EIR,
   {74ce1f69-2bcb-4ce4-94b0-2dbf91a66b5f}, !- Handle
@@ -7238,7 +7241,11 @@ OS:Chiller:Electric:EIR,
   1,                                      !- Sizing Factor
   0,                                      !- Basin Heater Capacity {W/K}
   10,                                     !- Basin Heater Setpoint Temperature {C}
-  ;                                       !- Basin Heater Operating Schedule Name
+  ,                                       !- Basin Heater Operating Schedule Name
+  ,                                       !- Condenser Heat Recovery Relative Capacity Fraction
+  ,                                       !- Heat Recovery Inlet High Temperature Limit Schedule Name
+  ,                                       !- Heat Recovery Leaving Temperature Setpoint Node Name
+  General;                                !- End-Use Subcategory
 
 OS:Curve:Biquadratic,
   {a2cd204e-454d-4cc8-b093-7176cf8b344e}, !- Handle
@@ -7308,7 +7315,11 @@ OS:Chiller:Electric:EIR,
   1,                                      !- Sizing Factor
   0,                                      !- Basin Heater Capacity {W/K}
   10,                                     !- Basin Heater Setpoint Temperature {C}
-  ;                                       !- Basin Heater Operating Schedule Name
+  ,                                       !- Basin Heater Operating Schedule Name
+  ,                                       !- Condenser Heat Recovery Relative Capacity Fraction
+  ,                                       !- Heat Recovery Inlet High Temperature Limit Schedule Name
+  ,                                       !- Heat Recovery Leaving Temperature Setpoint Node Name
+  General;                                !- End-Use Subcategory
 
 OS:Curve:Biquadratic,
   {7a3bb7d2-aac5-41ff-8cd1-c534a0f33c34}, !- Handle
@@ -8168,6 +8179,7 @@ OS:PlantLoop,
   {5c3724fe-3ea2-4e21-9bbe-17e73d80d211}, !- Handle
   Condenser Water Loop,                   !- Name
   ,                                       !- Fluid Type
+  0,                                      !- Glycol Concentration
   ,                                       !- User Defined Fluid Type
   ,                                       !- Plant Equipment Operation Heating Load
   ,                                       !- Plant Equipment Operation Cooling Load
@@ -8186,10 +8198,23 @@ OS:PlantLoop,
   ,                                       !- Demand Side Branch List Name
   ,                                       !- Demand Side Connector List Name
   Optimal,                                !- Load Distribution Scheme
-  ,                                       !- Availability Manager List Name
+  {ca82e38b-4489-41fc-8c6c-811422841d9e}, !- Availability Manager List Name
   ,                                       !- Plant Loop Demand Calculation Scheme
   ,                                       !- Common Pipe Simulation
-  ;                                       !- Pressure Simulation Type
+  ,                                       !- Pressure Simulation Type
+  ,                                       !- Plant Equipment Operation Heating Load Schedule
+  ,                                       !- Plant Equipment Operation Cooling Load Schedule
+  ,                                       !- Primary Plant Equipment Operation Scheme Schedule
+  ,                                       !- Component Setpoint Operation Scheme Schedule
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter Name
+  ,                                       !- Supply Mixer Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {ca82e38b-4489-41fc-8c6c-811422841d9e}, !- Handle
+  Condenser Water Loop AvailabilityManagerAssignmentList, !- Name
+  ;                                       !- Availability Manager Name 1
 
 OS:Sizing:Plant,
   {f6fd19a8-baee-4018-b95a-9765bcb1e83b}, !- Handle
@@ -8345,7 +8370,10 @@ OS:Pump:ConstantSpeed,
   ,                                       !- Impeller Diameter {m}
   ,                                       !- Rotational Speed {rev/min}
   ,                                       !- Zone
-  ;                                       !- Skin Loss Radiative Fraction
+  ,                                       !- Skin Loss Radiative Fraction
+  PowerPerFlowPerPressure,                !- Design Power Sizing Method
+  348701.1,                               !- Design Electric Power per Unit Flow Rate {W/(m3/s)}
+  1.282051282;                            !- Design Shaft Power per Unit Flow Rate per Unit Head {W-s/m3-Pa}
 
 OS:CoolingTower:SingleSpeed,
   {ef5bf89a-4d8b-4435-aab8-f38a4bed3aa2}, !- Handle
@@ -8376,7 +8404,16 @@ OS:CoolingTower:SingleSpeed,
   MinimalCell,                            !- Cell Control
   0.33,                                   !- Cell Minimum  Water Flow Rate Fraction
   2.5,                                    !- Cell Maximum Water Flow Rate Fraction
-  1;                                      !- Sizing Factor
+  1,                                      !- Sizing Factor
+  0.1,                                    !- Free Convection Air Flow Rate Sizing Factor
+  0.1,                                    !- Free Convection U-Factor Times Area Value Sizing Factor
+  1.25,                                   !- Heat Rejection Capacity and Nominal Capacity Sizing Ratio
+  0.1,                                    !- Free Convection Nominal Capacity Sizing Factor
+  35.0,                                   !- Design Inlet Air Dry-Bulb Temperature {C}
+  25.6,                                   !- Design Inlet Air Wet-Bulb Temperature {C}
+  Autosize,                               !- Design Approach Temperature {deltaC}
+  Autosize,                               !- Design Range Temperature {deltaC}
+  General;                                !- End-Use Subcategory
 
 OS:Pipe:Adiabatic,
   {e24aa3b1-99cf-43b2-8654-8316eb96c646}, !- Handle
@@ -9230,7 +9267,7 @@ OS:AirLoopHVAC,
   VAV with Reheat,                        !- Name
   ,                                       !- Controller List Name
   {d352f6c7-bf87-435f-9e8d-cf84d7436989}, !- Availability Schedule
-  {768fcaa3-8a7a-4e50-84bb-4af04539d27c}, !- Availability Manager
+  {0477e639-7089-4a5e-90bd-4e2692820b98}, !- Availability Manager List Name
   AutoSize,                               !- Design Supply Air Flow Rate {m3/s}
   ,                                       !- Branch List Name
   ,                                       !- Connector List Name
@@ -9239,7 +9276,17 @@ OS:AirLoopHVAC,
   {54f12be1-3b68-4454-a669-e35fbbafe45f}, !- Demand Side Inlet Node A
   {1ce7e2cb-0848-4e50-81e9-cc3e8163b6f3}, !- Supply Side Outlet Node A
   ,                                       !- Demand Side Inlet Node B
-  ;                                       !- Supply Side Outlet Node B
+  ,                                       !- Supply Side Outlet Node B
+  ,                                       !- Return Air Bypass Flow Temperature Setpoint Schedule Name
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter A Name
+  ,                                       !- Demand Splitter B Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {0477e639-7089-4a5e-90bd-4e2692820b98}, !- Handle
+  VAV with Reheat AvailabilityManagerAssignmentList, !- Name
+  {768fcaa3-8a7a-4e50-84bb-4af04539d27c}; !- Availability Manager Name 1
 
 OS:Node,
   {a4460cdb-9f84-4fd6-bb0e-2aafc94e657d}, !- Handle
@@ -10164,7 +10211,7 @@ OS:AirLoopHVAC,
   VAV with Reheat 1,                      !- Name
   ,                                       !- Controller List Name
   {1abd6a35-aa55-4510-94dc-3f1ec492df23}, !- Availability Schedule
-  {af46423a-7e26-4ebd-afbb-eb47e3c85c81}, !- Availability Manager
+  {323e8d94-e94b-4fca-a7af-184ed5a32708}, !- Availability Manager List Name
   AutoSize,                               !- Design Supply Air Flow Rate {m3/s}
   ,                                       !- Branch List Name
   ,                                       !- Connector List Name
@@ -10173,7 +10220,17 @@ OS:AirLoopHVAC,
   {abf94d9e-67f2-4204-85d7-5ae5f116ac0f}, !- Demand Side Inlet Node A
   {3fbafda5-01d3-4ace-8418-0bc59f7c6499}, !- Supply Side Outlet Node A
   ,                                       !- Demand Side Inlet Node B
-  ;                                       !- Supply Side Outlet Node B
+  ,                                       !- Supply Side Outlet Node B
+  ,                                       !- Return Air Bypass Flow Temperature Setpoint Schedule Name
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter A Name
+  ,                                       !- Demand Splitter B Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {323e8d94-e94b-4fca-a7af-184ed5a32708}, !- Handle
+  VAV with Reheat 1 AvailabilityManagerAssignmentList, !- Name
+  {af46423a-7e26-4ebd-afbb-eb47e3c85c81}; !- Availability Manager Name 1
 
 OS:Node,
   {b397b46e-cc7e-4083-af8d-9cde433a657a}, !- Handle
@@ -11112,7 +11169,7 @@ OS:AirLoopHVAC,
   VAV with Reheat 2,                      !- Name
   ,                                       !- Controller List Name
   {2b5fdcaf-4992-4d53-8dc9-0bd840a8d4bf}, !- Availability Schedule
-  {6825cbd1-9216-4894-9672-3d948e57d3c5}, !- Availability Manager
+  {30f95084-4645-4db9-b311-38c711309682}, !- Availability Manager List Name
   AutoSize,                               !- Design Supply Air Flow Rate {m3/s}
   ,                                       !- Branch List Name
   ,                                       !- Connector List Name
@@ -11121,7 +11178,17 @@ OS:AirLoopHVAC,
   {694e5969-e389-4b79-852a-6b1bf43e1164}, !- Demand Side Inlet Node A
   {280207f1-6fdd-4658-9008-1c14e4688e5c}, !- Supply Side Outlet Node A
   ,                                       !- Demand Side Inlet Node B
-  ;                                       !- Supply Side Outlet Node B
+  ,                                       !- Supply Side Outlet Node B
+  ,                                       !- Return Air Bypass Flow Temperature Setpoint Schedule Name
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter A Name
+  ,                                       !- Demand Splitter B Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {30f95084-4645-4db9-b311-38c711309682}, !- Handle
+  VAV with Reheat 2 AvailabilityManagerAssignmentList, !- Name
+  {6825cbd1-9216-4894-9672-3d948e57d3c5}; !- Availability Manager Name 1
 
 OS:Node,
   {3c7041de-c01d-443b-ad49-ef6362943a74}, !- Handle
@@ -12059,6 +12126,7 @@ OS:PlantLoop,
   {d18dcf38-3115-4403-aed4-45785bb0e431}, !- Handle
   Main Service Water Loop,                !- Name
   ,                                       !- Fluid Type
+  0,                                      !- Glycol Concentration
   ,                                       !- User Defined Fluid Type
   ,                                       !- Plant Equipment Operation Heating Load
   ,                                       !- Plant Equipment Operation Cooling Load
@@ -12077,10 +12145,23 @@ OS:PlantLoop,
   ,                                       !- Demand Side Branch List Name
   ,                                       !- Demand Side Connector List Name
   Optimal,                                !- Load Distribution Scheme
-  ,                                       !- Availability Manager List Name
+  {02ce902a-c216-4ff0-ba9b-0db239de6897}, !- Availability Manager List Name
   ,                                       !- Plant Loop Demand Calculation Scheme
   ,                                       !- Common Pipe Simulation
-  ;                                       !- Pressure Simulation Type
+  ,                                       !- Pressure Simulation Type
+  ,                                       !- Plant Equipment Operation Heating Load Schedule
+  ,                                       !- Plant Equipment Operation Cooling Load Schedule
+  ,                                       !- Primary Plant Equipment Operation Scheme Schedule
+  ,                                       !- Component Setpoint Operation Scheme Schedule
+  ,                                       !- Demand Mixer Name
+  ,                                       !- Demand Splitter Name
+  ,                                       !- Supply Mixer Name
+  ;                                       !- Supply Splitter Name
+
+OS:AvailabilityManagerAssignmentList,
+  {02ce902a-c216-4ff0-ba9b-0db239de6897}, !- Handle
+  Main Service Water Loop AvailabilityManagerAssignmentList, !- Name
+  ;                                       !- Availability Manager Name 1
 
 OS:Sizing:Plant,
   {10c063ee-b8aa-4e28-b0eb-9078c7ad5033}, !- Handle
@@ -12278,7 +12359,10 @@ OS:Pump:ConstantSpeed,
   ,                                       !- Impeller Diameter {m}
   ,                                       !- Rotational Speed {rev/min}
   ,                                       !- Zone
-  ;                                       !- Skin Loss Radiative Fraction
+  ,                                       !- Skin Loss Radiative Fraction
+  PowerPerFlowPerPressure,                !- Design Power Sizing Method
+  348701.1,                               !- Design Electric Power per Unit Flow Rate {W/(m3/s)}
+  1.282051282;                            !- Design Shaft Power per Unit Flow Rate per Unit Head {W-s/m3-Pa}
 
 OS:Node,
   {ce2379c2-9d6b-4e5e-9222-5837255906f3}, !- Handle
@@ -12358,7 +12442,10 @@ OS:WaterHeater:Mixed,
   1,                                      !- Source Side Effectiveness
   autosize,                               !- Use Side Design Flow Rate {m3/s}
   autosize,                               !- Source Side Design Flow Rate {m3/s}
-  1.5;                                    !- Indirect Water Heating Recovery Time {hr}
+  1.5,                                    !- Indirect Water Heating Recovery Time {hr}
+  IndirectHeatPrimarySetpoint,            !- Source Side Flow Control Mode
+  ,                                       !- Indirect Alternate Setpoint Temperature Schedule Name
+  General;                                !- End-Use Subcategory
 
 OS:Schedule:Ruleset,
   {b5286c13-eee1-43ba-83e1-80d086790d93}, !- Handle
@@ -14626,7 +14713,28 @@ OS:AvailabilityManager:NightCycle,
   ,                                       !- Fan Schedule
   CycleOnAny,                             !- Control Type
   1,                                      !- Thermostat Tolerance {deltaC}
-  3600;                                   !- Cycling Run Time {s}
+  ,                                       !- Cycling Run Time Control Type
+  ,                                       !- Cycling Run Time {s}
+  {ce3f782a-c849-479d-b1cb-e4bc314d252e}, !- Control Zone or Zone List Name
+  {4a7e33fc-d31e-4e85-b487-ba293be4fc6e}, !- Cooling Control Zone or Zone List Name
+  {8bbdeae0-e366-4957-ae6d-2ad20fbe0d29}, !- Heating Control Zone or Zone List Name
+  {6db664de-09e3-48e1-97ef-2156e5d3f74b}; !- Heating Zone Fans Only Zone or Zone List Name
+
+OS:ModelObjectList,
+  {ce3f782a-c849-479d-b1cb-e4bc314d252e}, !- Handle
+  Availability Manager Night Cycle 1 Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {4a7e33fc-d31e-4e85-b487-ba293be4fc6e}, !- Handle
+  Availability Manager Night Cycle 1 Cooling Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {8bbdeae0-e366-4957-ae6d-2ad20fbe0d29}, !- Handle
+  Availability Manager Night Cycle 1 Heating Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {6db664de-09e3-48e1-97ef-2156e5d3f74b}, !- Handle
+  Availability Manager Night Cycle 1 Heating Zone Fans Only Zone List; !- Name
 
 OS:Schedule:Ruleset,
   {d352f6c7-bf87-435f-9e8d-cf84d7436989}, !- Handle
@@ -14921,7 +15029,28 @@ OS:AvailabilityManager:NightCycle,
   ,                                       !- Fan Schedule
   CycleOnAny,                             !- Control Type
   1,                                      !- Thermostat Tolerance {deltaC}
-  3600;                                   !- Cycling Run Time {s}
+  ,                                       !- Cycling Run Time Control Type
+  ,                                       !- Cycling Run Time {s}
+  {a98bb915-c7ea-41ae-9a7e-c2f9c6f1f949}, !- Control Zone or Zone List Name
+  {278ea9b6-e5bd-4a36-a7fa-b5ab3a99c4ca}, !- Cooling Control Zone or Zone List Name
+  {37f9b218-d4ce-46bd-b5a6-78b6bf4a03c4}, !- Heating Control Zone or Zone List Name
+  {191e0644-b5fd-4bae-b99f-c3a77af2d9dd}; !- Heating Zone Fans Only Zone or Zone List Name
+
+OS:ModelObjectList,
+  {a98bb915-c7ea-41ae-9a7e-c2f9c6f1f949}, !- Handle
+  Availability Manager Night Cycle 2 Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {278ea9b6-e5bd-4a36-a7fa-b5ab3a99c4ca}, !- Handle
+  Availability Manager Night Cycle 2 Cooling Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {37f9b218-d4ce-46bd-b5a6-78b6bf4a03c4}, !- Handle
+  Availability Manager Night Cycle 2 Heating Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {191e0644-b5fd-4bae-b99f-c3a77af2d9dd}, !- Handle
+  Availability Manager Night Cycle 2 Heating Zone Fans Only Zone List; !- Name
 
 OS:Schedule:Ruleset,
   {1abd6a35-aa55-4510-94dc-3f1ec492df23}, !- Handle
@@ -15216,7 +15345,28 @@ OS:AvailabilityManager:NightCycle,
   ,                                       !- Fan Schedule
   CycleOnAny,                             !- Control Type
   1,                                      !- Thermostat Tolerance {deltaC}
-  3600;                                   !- Cycling Run Time {s}
+  ,                                       !- Cycling Run Time Control Type
+  ,                                       !- Cycling Run Time {s}
+  {b4bc42c9-57df-4d6f-9500-dbdd73bbdd94}, !- Control Zone or Zone List Name
+  {d47a08f9-f610-4fae-8d24-f7e7f24838fa}, !- Cooling Control Zone or Zone List Name
+  {1437ece8-cbab-4ce7-bb57-f6a65f28effb}, !- Heating Control Zone or Zone List Name
+  {39664eb8-3b01-4189-8a72-9c300f083fda}; !- Heating Zone Fans Only Zone or Zone List Name
+
+OS:ModelObjectList,
+  {b4bc42c9-57df-4d6f-9500-dbdd73bbdd94}, !- Handle
+  Availability Manager Night Cycle 3 Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {d47a08f9-f610-4fae-8d24-f7e7f24838fa}, !- Handle
+  Availability Manager Night Cycle 3 Cooling Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {1437ece8-cbab-4ce7-bb57-f6a65f28effb}, !- Handle
+  Availability Manager Night Cycle 3 Heating Control Zone List; !- Name
+
+OS:ModelObjectList,
+  {39664eb8-3b01-4189-8a72-9c300f083fda}, !- Handle
+  Availability Manager Night Cycle 3 Heating Zone Fans Only Zone List; !- Name
 
 OS:Schedule:Ruleset,
   {2b5fdcaf-4992-4d53-8dc9-0bd840a8d4bf}, !- Handle
@@ -16024,4 +16174,242 @@ OS:Rendering:Color,
   255,                                    !- Rendering Red Value
   255,                                    !- Rendering Green Value
   0;                                      !- Rendering Blue Value
+
+OS:StandardsInformation:Material,
+  {d13ccceb-ecdc-4679-8fe0-73b4d299655c}, !- Handle
+  {0efa0d45-bcd8-4c96-bc2b-f42d89c3c238}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {a95c2f7a-7679-45df-a346-fd6070c1a034}, !- Handle
+  {b391a24e-1f7e-4d69-a629-43abe927e54b}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {b39c0280-04b5-48e3-b8a5-c83c43165095}, !- Handle
+  {d8bb28f0-efa4-4355-b5dc-e88cec217c14}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {b1e54254-9952-4e6a-9bf9-476cca098320}, !- Handle
+  {2889994a-65cb-46de-b581-ce92ceea6c98}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {7f85432b-fde3-4a18-8c55-c949d5118b70}, !- Handle
+  {707600c0-0a96-49cb-970a-530bc23d5fea}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {fa82b80b-de42-4e08-bea5-245781fe2856}, !- Handle
+  {5006594a-411a-41e7-9243-392f1bcdcc74}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {c8c126b3-639a-4dbb-bfa6-4f587623066e}, !- Handle
+  {e1b347cd-9d3c-486c-a39d-8e8aa008915c}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {5f49c3e0-85ff-4011-985a-aa0441290dc2}, !- Handle
+  {b88dffd0-3df1-4905-a7be-ee15e5e6991c}; !- Construction Name
+
+OS:StandardsInformation:Construction,
+  {f9d8584e-1817-4428-8aa1-7d1e5fb72082}, !- Handle
+  {60143d2f-b303-43a5-9bb7-de2c18cc7916}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {6c444ed2-8f43-4718-9807-f695b17e3e2b}, !- Handle
+  {a9b5e078-06ca-41b5-a875-041e6e54bc9c}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {5de7c108-64e8-48e0-8dfe-4463e61e29e8}, !- Handle
+  {c2464840-9c0a-460a-bc4a-d049af76ad76}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {1547abb7-7cef-4653-9d34-a6d9cb1652e4}, !- Handle
+  {bb3ac871-27b7-42e2-8875-993610d1bce2}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {9e97c8da-7c84-4b96-9159-b5bbd866f86a}, !- Handle
+  {96654c35-eae0-4eb9-a205-cc48578d847f}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {6f032cba-2e45-4e74-9e2c-ee3f08f75562}, !- Handle
+  {7c9256ae-28e8-4e55-9af0-7f1fdfc1ce9c}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {f47614de-5e44-43ff-a126-009ca1ef8784}, !- Handle
+  {88bee30a-1e82-4cdb-aaad-8db2273b67bf}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {1af45760-e513-4c4a-a862-021bcea00575}, !- Handle
+  {0dc5af21-730d-474f-8f7b-cb8a91313548}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {11914cd3-6c21-45b9-b539-7d0d66934f86}, !- Handle
+  {10cb3f9e-4c38-49e4-aab4-e001cc8def77}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {6d47dc19-efc9-42a5-a029-389ce983f187}, !- Handle
+  {ae371330-fca2-48eb-85a6-8993acac8766}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {e9c1a27a-7cb3-4e31-8c38-bef10b771396}, !- Handle
+  {77a31708-0d99-4ec6-9995-a992f522241f}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {73791a81-aae7-4bc8-a029-072222450980}, !- Handle
+  {4404a987-7066-48e2-9691-8d8f81e1bdac}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {dc416953-d814-49c0-a73a-c98e592e72c2}, !- Handle
+  {54cdc68e-4c0d-442e-bbc4-1a0b9e7c585d}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {f68b8f5f-bdab-47c7-a305-9ac5ba26da8d}, !- Handle
+  {d659af9c-cd57-4733-910f-dd559ff2b033}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {c231c985-3dc7-4ebf-a94b-668d83e6fd5a}, !- Handle
+  {f957b8ba-8538-4a99-9674-a33f18d28232}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {5d9fe051-c535-4bf9-a6a8-2d08569cc4df}, !- Handle
+  {301dd415-5420-4b7f-9ede-bb8b9f189c86}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {3244be3c-da94-4f64-9a38-7db6e3047733}, !- Handle
+  {58fe5a0b-f0b6-4e4a-8afe-893e138978a3}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {38a19ed8-48ae-46af-9746-a3645f132841}, !- Handle
+  {5e85d652-5633-4535-9c55-1e9d4ec75e18}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {c9f485b9-6482-4939-9fcc-f44291c544ba}, !- Handle
+  {9c084d70-79da-4d2d-8032-f91e656815c3}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {96183912-3781-4e5c-8cee-ee01793b2acc}, !- Handle
+  {e21495cc-097c-4a0e-a5aa-4a9211df92fe}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {132f77fc-d5d2-4df4-b708-6e9818e9b474}, !- Handle
+  {d7d266e5-a6d7-408f-a065-abd4c34b4016}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {17f0cf0f-54ec-4361-93ed-262bfd59e845}, !- Handle
+  {7af1c66f-0711-409c-bf80-c26bdc02a0c2}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {72e1199b-f740-4564-9ba0-e3d2deacd818}, !- Handle
+  {c7c9de6c-5ff4-4248-bd88-a2fb4691764f}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {71937dea-bea6-4349-ae50-c1b9ee60b183}, !- Handle
+  {d8b4a54a-5579-4ace-8d88-c0cca5a97c58}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {92ea2a48-46cc-4cdd-a72d-a983332e8316}, !- Handle
+  {02e7d286-c8b7-40c4-ba9d-63d2fe81ea9d}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {51d57afb-9c47-46c2-993e-6f1c6c6200ef}, !- Handle
+  {6ca43d68-60f5-48b4-90c8-df994b745308}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {dd7ae1b8-6432-4486-beab-d1c86d905864}, !- Handle
+  {b67dbce1-5daa-4167-b227-4bf3d6a3ffe1}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {011b0f96-f685-4273-9b67-436663a1da78}, !- Handle
+  {0f6c9977-83a2-4070-b244-992c1ccbc800}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {ef0a8b46-8ac6-49e9-9893-0a4466b2606e}, !- Handle
+  {ee58626e-a180-4d49-98c2-7a72d96419ed}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {6e600c5b-5571-4ac1-8ea1-d45266dc149d}, !- Handle
+  {9c68170c-1d87-4173-a848-98c9e382d46a}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {d0bc0654-75e0-49d2-a787-5a2e54b5d75e}, !- Handle
+  {6a3d90c1-a9c5-474c-ab04-8f6eb9f57b99}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {3e786304-98ac-44fa-b655-9438e5f2f3c1}, !- Handle
+  {9c2b37b1-d2d9-464f-b457-67061cb7eb5a}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {62dd9009-ea7f-4fa0-b351-489b6b456539}, !- Handle
+  {ff762e4a-b3dc-4ea4-89c5-b84461742c1c}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {bd382ff3-82e4-4ff8-86e9-c22e6ddeefba}, !- Handle
+  {f9d8f884-8335-4d1a-889c-ab39535832ba}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {1de50b3d-bad3-4fab-ad21-c121d57046c6}, !- Handle
+  {771912a1-7bbf-4130-95b9-bb831c346c50}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {a26ea2e7-0273-4702-a16f-5c29f6a73966}, !- Handle
+  {487192a7-2d46-4181-93b5-58cbae3b519d}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {e4b142f1-9e47-4b75-918b-c88d06173c36}, !- Handle
+  {ddc30a63-d83b-486b-ae85-a2077bb33ea8}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {57de138b-f3df-4626-aa6e-f2ea92325027}, !- Handle
+  {e80ac031-34ab-4ab0-a2ee-c06672a62be6}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {4784b1f4-c5e3-4d2f-9ff3-1e7d801764ea}, !- Handle
+  {d2fde727-95a4-4cdb-bf2a-5ee178a847b4}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {64ea6b71-5e6d-43ec-90e8-ca145cb31860}, !- Handle
+  {64c36262-72b2-451f-a238-ab578375bdec}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {e3e28f1a-d4b8-4d3e-bbcb-cc1f8a6ef6e6}, !- Handle
+  {3b7c8617-137c-425e-90f9-b17f726a9442}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {a4f8b8f5-a47c-4dff-8634-4c909fbd0899}, !- Handle
+  {10b3add3-3c5b-435b-8f50-9324c725934f}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {4a89feb7-b9bf-4dc1-9c60-307e0d952a44}, !- Handle
+  {4716b539-598f-469b-a49b-f654e852cfbe}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {9a6e3341-4c48-498b-b4db-d61aee4c99f9}, !- Handle
+  {17922470-9aaa-4ed9-92cb-9bfbd4fc9df1}; !- Material Name
+
+OS:StandardsInformation:Material,
+  {52ba1fe0-1994-40ed-8008-93c0f451d05f}, !- Handle
+  {86cd745e-0ee7-40b4-8e77-d183789a9a6e}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {affee824-ecc2-482f-ac02-5d7aece5855f}, !- Handle
+  {a977b188-1feb-451e-b9b8-7579c8c89c82}; !- Construction Name
+
+OS:StandardsInformation:Material,
+  {46b9cc23-d9ec-4fa1-8b35-7e57e6a6fd11}, !- Handle
+  {84740c0a-1a8e-421d-9905-de450158b723}; !- Material Name
+
+OS:StandardsInformation:Construction,
+  {35d9439d-cd30-4ace-9ab6-1e105b7f42da}, !- Handle
+  {402a7b0a-368d-4b60-82b1-1ec83a01dac1}; !- Construction Name
+
+OS:WeatherFile,
+  {dd3d1ddd-c535-49c6-a854-da511989985a}, !- Handle
+  Montreal Int'l,                         !- City
+  PQ,                                     !- State Province Region
+  CAN,                                    !- Country
+  WYEC2-B-94792,                          !- Data Source
+  716270,                                 !- WMO Number
+  45.47,                                  !- Latitude {deg}
+  -73.75,                                 !- Longitude {deg}
+  -5,                                     !- Time Zone {hr}
+  36,                                     !- Elevation {m}
+  file:CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
+  3C3F39E2;                               !- Checksum
 

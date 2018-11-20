@@ -56,13 +56,15 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
   {78fc9da4-4d1f-40ea-abef-42e2fc17fcf7}, !- Building Story Name
   {4d5cb744-9d0b-4aa2-ac26-a1ab8e5fe029}, !- Thermal Zone Name
-  Yes;                                    !- Part of Total Floor Area
+  Yes,                                    !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {6fda72e7-e9a3-456f-99d8-861fd64ce491}, !- Handle
@@ -95,7 +97,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -136,7 +138,7 @@ OS:Space,
   {3fc05841-400e-4b7a-b0ff-19de7f77b49d}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -177,7 +179,7 @@ OS:Space,
   {3fc05841-400e-4b7a-b0ff-19de7f77b49d}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -218,7 +220,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -257,7 +259,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -296,7 +298,7 @@ OS:Space,
   {3fc05841-400e-4b7a-b0ff-19de7f77b49d}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -337,7 +339,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -359,7 +361,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -415,7 +417,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -454,7 +456,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -544,7 +546,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -600,7 +602,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -673,13 +675,15 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
   {34c2b3a4-b93e-443b-9867-ce24d7c61c21}, !- Building Story Name
   {c8f47e88-befc-4da2-a3ef-dfd0a6bc1fe7}, !- Thermal Zone Name
-  Yes;                                    !- Part of Total Floor Area
+  Yes,                                    !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {92fc0069-37f1-4f1d-8565-c516a771ba37}, !- Handle
@@ -797,13 +801,15 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
   {34c2b3a4-b93e-443b-9867-ce24d7c61c21}, !- Building Story Name
   {392b5c4f-bbf1-4adb-b505-ca1bfd37c116}, !- Thermal Zone Name
-  Yes;                                    !- Part of Total Floor Area
+  Yes,                                    !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {d6273170-f5e5-41d7-919f-8167938886ad}, !- Handle
@@ -1470,13 +1476,15 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
   {34c2b3a4-b93e-443b-9867-ce24d7c61c21}, !- Building Story Name
   {64ab470a-3099-4d73-8bce-241821d4063a}, !- Thermal Zone Name
-  Yes;                                    !- Part of Total Floor Area
+  Yes,                                    !- Part of Total Floor Area
+  ,                                       !- Design Specification Outdoor Air Object Name
+  ;                                       !- Building Unit Name
 
 OS:Surface,
   {578caafc-0a89-48e9-a1fb-c8ed716258b4}, !- Handle
@@ -1509,7 +1517,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -1757,7 +1765,7 @@ OS:Space,
   {e4b5061d-2930-48b3-951c-4684d0a4a05c}, !- Space Type Name
   ,                                       !- Default Construction Set Name
   ,                                       !- Default Schedule Set Name
-  0,                                      !- Direction of Relative North {deg}
+  -0,                                     !- Direction of Relative North {deg}
   0,                                      !- X Origin {m}
   0,                                      !- Y Origin {m}
   0,                                      !- Z Origin {m}
@@ -2198,7 +2206,7 @@ OS:Surface,
   ,                                       !- Construction Name
   {a6db022f-dfaa-45fa-9573-a2cb4bec5f66}, !- Space Name
   Surface,                                !- Outside Boundary Condition
-  {39f66745-bb24-4ccc-8ef8-a7a5af95feea}, !- Outside Boundary Condition Object
+  {e6caab17-bbcc-4527-b8e0-bfd18ca5bf41}, !- Outside Boundary Condition Object
   NoSun,                                  !- Sun Exposure
   NoWind,                                 !- Wind Exposure
   ,                                       !- View Factor to Ground
@@ -2811,23 +2819,6 @@ OS:Surface,
   45.3375, 28.7006, 0,                    !- X,Y,Z Vertex 2 {m}
   4.5732, 28.7006, 0,                     !- X,Y,Z Vertex 3 {m}
   0, 33.2738, 0;                          !- X,Y,Z Vertex 4 {m}
-
-OS:Surface,
-  {39f66745-bb24-4ccc-8ef8-a7a5af95feea}, !- Handle
-  Core_top_ZN_5_Ceiling,                  !- Name
-  RoofCeiling,                            !- Surface Type
-  ,                                       !- Construction Name
-  {b422ea64-bad8-4f36-9616-c0c97070580c}, !- Space Name
-  Surface,                                !- Outside Boundary Condition
-  {0d618067-41d2-4bfd-b9f8-b6a9b234c7b4}, !- Outside Boundary Condition Object
-  NoSun,                                  !- Sun Exposure
-  NoWind,                                 !- Wind Exposure
-  ,                                       !- View Factor to Ground
-  ,                                       !- Number of Vertices
-  45.3375, 4.5732, 10.668,                !- X,Y,Z Vertex 1 {m}
-  45.3375, 28.7006, 10.668,               !- X,Y,Z Vertex 2 {m}
-  4.5732, 28.7006, 10.668,                !- X,Y,Z Vertex 3 {m}
-  4.5732, 4.5732, 10.668;                 !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
   {96c0d38b-45dd-4d4d-83ed-7371f075cf56}, !- Handle
@@ -16336,7 +16327,7 @@ OS:WeatherFile,
   -73.75,                                 !- Longitude {deg}
   -5,                                     !- Time Zone {hr}
   36,                                     !- Elevation {m}
-  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.Dx7872/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
+  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.y12268/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
   3C3F39E2;                               !- Checksum
 
 OS:SizingPeriod:DesignDay,
@@ -16509,38 +16500,113 @@ OS:SizingPeriod:DesignDay,
   0.465,                                  !- ASHRAE Taub {dimensionless}
   1.966;                                  !- ASHRAE Taud {dimensionless}
 
+OS:Surface,
+  {e6caab17-bbcc-4527-b8e0-bfd18ca5bf41}, !- Handle
+  Core_top_ZN_5_Ceiling 1,                !- Name
+  RoofCeiling,                            !- Surface Type
+  ,                                       !- Construction Name
+  {b422ea64-bad8-4f36-9616-c0c97070580c}, !- Space Name
+  Surface,                                !- Outside Boundary Condition
+  {0d618067-41d2-4bfd-b9f8-b6a9b234c7b4}, !- Outside Boundary Condition Object
+  NoSun,                                  !- Sun Exposure
+  NoWind,                                 !- Wind Exposure
+  ,                                       !- View Factor to Ground
+  ,                                       !- Number of Vertices
+  45.3375, 4.5732, 10.668,                !- X,Y,Z Vertex 1 {m}
+  45.3375, 28.7006, 10.668,               !- X,Y,Z Vertex 2 {m}
+  4.5732, 28.7006, 10.668,                !- X,Y,Z Vertex 3 {m}
+  4.5732, 4.5732, 10.668;                 !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {ccf7574b-e920-41a2-8b0e-41c80cf6869f}, !- Handle
+  Sub Surface 1,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  {402a7b0a-368d-4b60-82b1-1ec83a01dac1}, !- Construction Name
+  {e6caab17-bbcc-4527-b8e0-bfd18ca5bf41}, !- Surface Name
+  {240b4fbd-4532-4d07-aaff-fabd19389ef7}, !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  40.3213402625635, 7.4678489858155, 10.668, !- X,Y,Z Vertex 1 {m}
+  40.3213402625635, 25.5754489858155, 10.668, !- X,Y,Z Vertex 2 {m}
+  9.74894266256348, 25.5754489858155, 10.668, !- X,Y,Z Vertex 3 {m}
+  9.74894266256348, 7.4678489858155, 10.668; !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {0848e100-3de0-4ff8-8e3d-805245c22f19}, !- Handle
+  Sub Surface 2,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  {402a7b0a-368d-4b60-82b1-1ec83a01dac1}, !- Construction Name
+  {4d637a49-840b-4869-b547-936d5bb25d9e}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  40.3213402625635, 7.4678489858155, 11.8872, !- X,Y,Z Vertex 1 {m}
+  40.3213402625635, 25.5754489858155, 11.8872, !- X,Y,Z Vertex 2 {m}
+  9.74894266256348, 25.5754489858155, 11.8872, !- X,Y,Z Vertex 3 {m}
+  9.74894266256348, 7.4678489858155, 11.8872; !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {240b4fbd-4532-4d07-aaff-fabd19389ef7}, !- Handle
+  Sub Surface 3,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {0d618067-41d2-4bfd-b9f8-b6a9b234c7b4}, !- Surface Name
+  {ccf7574b-e920-41a2-8b0e-41c80cf6869f}, !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  40.3213402625635, 25.5754489858155, 10.668, !- X,Y,Z Vertex 1 {m}
+  40.3213402625635, 7.4678489858155, 10.668, !- X,Y,Z Vertex 2 {m}
+  9.74894266256348, 7.4678489858155, 10.668, !- X,Y,Z Vertex 3 {m}
+  9.74894266256348, 25.5754489858155, 10.668; !- X,Y,Z Vertex 4 {m}
+
 OS:Output:Variable,
-  {812eb479-40e9-4c54-8a1f-17a70b61d34d}, !- Handle
+  {6704de96-8dca-4c07-bf3f-9831fb76b01b}, !- Handle
   Output Variable 1,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Heating Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {362701cf-51e5-493b-a888-7bdce7e39867}, !- Handle
+  {34133b25-cffe-49ec-83b3-e7b76a52f14f}, !- Handle
   Output Variable 2,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Cooling Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {71bebfac-4c20-4084-96d5-123e39fa8bf2}, !- Handle
+  {58af0492-be1a-4f43-9082-f23b71f4cf8c}, !- Handle
   Output Variable 3,                      !- Name
   *,                                      !- Key Value
   Facility Total Purchased Electric Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {c3e1678e-176d-4992-b4b0-b5d3fd57f5e1}, !- Handle
+  {e9b330f7-2fed-4849-908e-bc665e6fa15a}, !- Handle
   Output Variable 4,                      !- Name
   *,                                      !- Key Value
   Heating Coil Electric Energy,           !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {43585262-7913-4d88-9333-277883813556}, !- Handle
+  {53f9cdce-e77c-4838-a3c8-bbd4fe4837fc}, !- Handle
   Output Variable 5,                      !- Name
   *,                                      !- Key Value
   Cooling Coil Total Cooling Energy,      !- Variable Name
   runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {2f22f418-902a-466f-b54a-403187fd1df0}, !- Handle
+  Output Variable 6,                      !- Name
+  *,                                      !- Key Value
+  Surface Inside Face Absorbed Shortwave Radiation Rate, !- Variable Name
+  hourly;                                 !- Reporting Frequency
 

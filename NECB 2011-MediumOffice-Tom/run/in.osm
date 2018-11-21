@@ -16239,7 +16239,7 @@ OS:WeatherFile,
   -73.75,                                 !- Longitude {deg}
   -5,                                     !- Time Zone {hr}
   36,                                     !- Elevation {m}
-  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.x15640/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
+  file:///C:/Users/levei/AppData/Local/Temp/OpenStudioApp.d10308/resources/files/CAN_PQ_Montreal.Intl.AP.716270_CWEC.epw, !- Url
   3C3F39E2;                               !- Checksum
 
 OS:SizingPeriod:DesignDay,
@@ -44065,79 +44065,107 @@ OS:Connection,
   2;                                      !- Inlet Port
 
 OS:Output:Variable,
-  {bb4f8fdc-2926-4fb0-841e-9c13a7cfd21c}, !- Handle
+  {f1b34724-9b53-43c2-b3ca-e2a363e2ded0}, !- Handle
   Output Variable 1,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Heating Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {52c537c7-e2ff-43f0-8fae-780f693b8b4d}, !- Handle
+  {ec051869-a91b-470c-839f-e3b7bdd69692}, !- Handle
   Output Variable 2,                      !- Name
   *,                                      !- Key Value
   Zone Air System Sensible Cooling Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {aa97b392-d75f-400e-9a7a-fa15232591ed}, !- Handle
+  {6e17a9e7-0e6b-4a82-a8d9-020479f6187b}, !- Handle
   Output Variable 3,                      !- Name
   *,                                      !- Key Value
   Facility Total Purchased Electric Energy, !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {250879b6-193c-4cab-b5de-6852a2a93773}, !- Handle
+  {d8140b36-5dbc-4d2f-8df5-df97fb399d6c}, !- Handle
   Output Variable 4,                      !- Name
   *,                                      !- Key Value
   Heating Coil Electric Energy,           !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {5649a88c-733c-4482-941e-4c314e6ef643}, !- Handle
+  {637f840a-603c-4b05-9cd6-61c58c35665b}, !- Handle
   Output Variable 5,                      !- Name
   *,                                      !- Key Value
   Cooling Coil Total Cooling Energy,      !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {8e067376-b7a8-42e6-a325-4b9b107daa30}, !- Handle
+  {0437e800-7b92-4f03-9b81-5ef1a5ac5fca}, !- Handle
   Output Variable 6,                      !- Name
   *,                                      !- Key Value
   Surface Inside Face Absorbed Shortwave Radiation Rate, !- Variable Name
   hourly;                                 !- Reporting Frequency
 
 OS:Output:Variable,
-  {86c88bb3-20f2-420d-932a-90d2f16a75a4}, !- Handle
+  {ca7d5143-4106-4560-a0fe-262f353fa02f}, !- Handle
   Output Variable 7,                      !- Name
   *,                                      !- Key Value
   Fan Electric Energy,                    !- Variable Name
   runperiod;                              !- Reporting Frequency
 
 OS:Output:Variable,
-  {0a536419-22ad-49db-92b7-cd4753151a62}, !- Handle
+  {b6d6c188-9c68-47f1-8ad0-217622a271bd}, !- Handle
   Output Variable 8,                      !- Name
   *,                                      !- Key Value
   Surface Inside Face Absorbed Shortwave Radiation Rate, !- Variable Name
   daily;                                  !- Reporting Frequency
 
 OS:Output:Variable,
-  {4aae8482-4ac1-4ba7-a2d7-f73e01d9c679}, !- Handle
+  {9cf525c5-3e4c-4a97-921c-e6e4ba256343}, !- Handle
   Output Variable 9,                      !- Name
   *,                                      !- Key Value
   Zone Mean Air Temperature,              !- Variable Name
   hourly;                                 !- Reporting Frequency
 
 OS:Output:Variable,
-  {fd0073e0-3c29-48d1-bcbf-c52c9de3400f}, !- Handle
+  {27d2acbe-7bb4-4ce5-88d2-7de30ad7f4cc}, !- Handle
   Output Variable 10,                     !- Name
   *,                                      !- Key Value
   Zone Air Relative Humidity,             !- Variable Name
   hourly;                                 !- Reporting Frequency
 
 OS:Output:Variable,
-  {77213efa-3035-455e-8dd1-3bb725cf6929}, !- Handle
+  {7d124958-7bc0-42a0-9318-17e807c319f9}, !- Handle
   Output Variable 11,                     !- Name
   *,                                      !- Key Value
   Cooling Coil Total Cooling Energy,      !- Variable Name
   hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {eaae4777-e050-448e-ae2b-17938865e081}, !- Handle
+  Output Variable 12,                     !- Name
+  *,                                      !- Key Value
+  Lights Electric Energy,                 !- Variable Name
+  hourly;                                 !- Reporting Frequency
+
+OS:Output:Variable,
+  {ac16ebf3-903c-4743-81a3-8c558699524b}, !- Handle
+  Output Variable 13,                     !- Name
+  *,                                      !- Key Value
+  Lights Electric Energy,                 !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {6eafde23-d424-4f46-a84a-6e966958b310}, !- Handle
+  Output Variable 14,                     !- Name
+  *,                                      !- Key Value
+  Zone Dehumidifier Electric Energy,      !- Variable Name
+  runperiod;                              !- Reporting Frequency
+
+OS:Output:Variable,
+  {f56c7aba-9562-4456-847a-48ce6f7da028}, !- Handle
+  Output Variable 15,                     !- Name
+  *,                                      !- Key Value
+  Electric Equipment Electric Energy,     !- Variable Name
+  runperiod;                              !- Reporting Frequency
 

@@ -48,3 +48,57 @@ NECB 2011-MediumOffice-NECB HDD Method-CAN_PQ_Montreal\.Intl\.AP\.716270_CWEC\.e
 NECB 2011-MediumOffice-NECB HDD Method-CAN_PQ_Montreal\.Intl\.AP\.716270_CWEC\.epw/run/stdout-energyplus
 
 NECB 2011-MediumOffice-NECB HDD Method-CAN_PQ_Montreal\.Intl\.AP\.716270_CWEC\.epw/run/stdout-expandobject
+
+NECB 2011-MediumOffice-Tom/files/
+
+NECB 2011-MediumOffice-Tom/measures/
+
+NECB 2011-MediumOffice-Tom/reports/
+
+NECB 2011-MediumOffice-Tom/out\.osw
+
+NECB 2011-MediumOffice-Tom/run/data_point_out\.json
+
+NECB 2011-MediumOffice-Tom/run/data_point\.zip
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.audit
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.bnd
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.eio
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.end
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.eso
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.mdd
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.mtd
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.shd
+
+NECB 2011-MediumOffice-Tom/run/eplusout\.sql
+
+NECB 2011-MediumOffice-Tom/run/finished\.job
+
+NECB 2011-MediumOffice-Tom/run/measure_attributes\.json
+
+NECB 2011-MediumOffice-Tom/run/objectives\.json
+
+NECB 2011-MediumOffice-Tom/run/results\.json
+
+NECB 2011-MediumOffice-Tom/run/run\.log
+
+NECB 2011-MediumOffice-Tom/run/sqlite\.err
+
+NECB 2011-MediumOffice-Tom/run/started\.job
+
+NECB 2011-MediumOffice-Tom/run/stdout-energyplus
+
+NECB 2011-MediumOffice-Tom/run/stdout-expandobject
+
+NECB 2011-MediumOffice-Tom/stderr
+
+NECB 2011-MediumOffice-Tom/stdout
+
+NECB 2011-MediumOffice-Tom/workflow\.osw

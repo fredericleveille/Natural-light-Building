@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 8.9.0-eba93e8e1b, YMD=2018.11.21 11:39,
+Program Version,EnergyPlus, Version 8.9.0-eba93e8e1b, YMD=2018.11.21 12:01,
    ************* Beginning Zone Sizing Calculations
    ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="ECONOMIZER MAX OA FRACTION 100 PCT DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="SCHEDULE DAY 1", Blank Schedule Type Limits Name input -- will not be validated.
@@ -102,16 +102,20 @@ Program Version,EnergyPlus, Version 8.9.0-eba93e8e1b, YMD=2018.11.21 11:39,
    ** Warning ** ProcessScheduleInput: Schedule:Year="SCHEDULE RULESET 9", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
    ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Severe  ** ProcessScheduleInput: Schedule="AS LATENT PLANTS LOADS HOURLY 2" has values outside its Schedule Type (DIMENSIONLESS 2) range
+   **   ~~~   **   Minimum should be >=0.100 and Maximum should be <=1000.000
    ** Severe  ** ProcessScheduleInput: Schedule="AS LATENT PLANTS LOADS HOURLY.CSV" has values outside its Schedule Type (DIMENSIONLESS 2) range
    **   ~~~   **   Minimum should be >=0.100 and Maximum should be <=1000.000
    ** Severe  ** ProcessScheduleInput: Schedule="AS SENSIBLE PLANTS LOADS HOURLY" has values outside its Schedule Type (DIMENSIONLESS 2) range
    **   ~~~   **   Minimum should be >=0.100 and Maximum should be <=1000.000
+   ** Severe  ** ProcessScheduleInput: Schedule="AS SENSIBLE PLANTS LOADS HOURLY 2" has values outside its Schedule Type (DIMENSIONLESS 2) range
+   **   ~~~   **   Minimum should be >=0.100 and Maximum should be <=1000.000
    **  Fatal  ** ProcessScheduleInput: Preceding Errors cause termination.
    ...Summary of Errors that led to program termination:
-   ..... Reference severe error count=2
-   ..... Last severe error=ProcessScheduleInput: Schedule="AS SENSIBLE PLANTS LOADS HOURLY" has values outside its Schedule Type (DIMENSIONLESS 2) range
+   ..... Reference severe error count=4
+   ..... Last severe error=ProcessScheduleInput: Schedule="AS SENSIBLE PLANTS LOADS HOURLY 2" has values outside its Schedule Type (DIMENSIONLESS 2) range
    ************* Warning:  Node connection errors not checked - most system input has not been read (see previous warning).
    ************* Fatal error -- final processing.  Program exited before simulations began.  See previous error messages.
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
-   ************* EnergyPlus Sizing Error Summary. During Sizing: 102 Warning; 2 Severe Errors.
-   ************* EnergyPlus Terminated--Fatal Error Detected. 102 Warning; 2 Severe Errors; Elapsed Time=00hr 00min  0.87sec
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 102 Warning; 4 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 102 Warning; 4 Severe Errors; Elapsed Time=00hr 00min  0.99sec
